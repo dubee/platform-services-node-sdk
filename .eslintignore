@@ -9,6 +9,6 @@ examples/**/node_modules/
 test/resources/*.js
 # ignore emitted js
 **/*v*.js
-!test/integration/*.js
+!test/**/*.js
 lib/*.js
 scripts/typedoc/

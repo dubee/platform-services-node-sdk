@@ -56,7 +56,9 @@ describe('EnterpriseManagementV1', () => {
 
       expect(getAuthenticatorMock).toHaveBeenCalled();
       expect(testInstance.baseOptions.authenticator).toBeInstanceOf(NoAuthAuthenticator);
-      expect(testInstance.baseOptions.serviceName).toBe(EnterpriseManagementV1.DEFAULT_SERVICE_NAME);
+      expect(testInstance.baseOptions.serviceName).toBe(
+        EnterpriseManagementV1.DEFAULT_SERVICE_NAME
+      );
       expect(testInstance.baseOptions.serviceUrl).toBe(EnterpriseManagementV1.DEFAULT_SERVICE_URL);
       expect(testInstance).toBeInstanceOf(EnterpriseManagementV1);
     });
@@ -154,7 +156,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.createAccountGroup({});
@@ -166,11 +168,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const createAccountGroupPromise = enterpriseManagement.createAccountGroup();
         expectToBePromise(createAccountGroupPromise);
 
-        createAccountGroupPromise.catch(err => {
+        createAccountGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -279,7 +281,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.getAccountGroupById({});
@@ -291,11 +293,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getAccountGroupByIdPromise = enterpriseManagement.getAccountGroupById();
         expectToBePromise(getAccountGroupByIdPromise);
 
-        getAccountGroupByIdPromise.catch(err => {
+        getAccountGroupByIdPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -353,7 +355,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.updateAccountGroup({});
@@ -365,11 +367,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const updateAccountGroupPromise = enterpriseManagement.updateAccountGroup();
         expectToBePromise(updateAccountGroupPromise);
 
-        updateAccountGroupPromise.catch(err => {
+        updateAccountGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -387,7 +389,9 @@ describe('EnterpriseManagementV1', () => {
           actions: actions,
         };
 
-        const getAccountGroupPermissibleActionsResult = enterpriseManagement.getAccountGroupPermissibleActions(params);
+        const getAccountGroupPermissibleActionsResult = enterpriseManagement.getAccountGroupPermissibleActions(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(getAccountGroupPermissibleActionsResult);
@@ -397,7 +401,11 @@ describe('EnterpriseManagementV1', () => {
 
         const options = getOptions(createRequestMock);
 
-        checkUrlAndMethod(options, '/account-groups/{account_group_id}/permissible-actions', 'POST');
+        checkUrlAndMethod(
+          options,
+          '/account-groups/{account_group_id}/permissible-actions',
+          'POST'
+        );
         const expectedAccept = undefined;
         const expectedContentType = 'application/json';
         checkMediaHeaders(createRequestMock, expectedAccept, expectedContentType);
@@ -424,7 +432,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.getAccountGroupPermissibleActions({});
@@ -436,11 +444,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getAccountGroupPermissibleActionsPromise = enterpriseManagement.getAccountGroupPermissibleActions();
         expectToBePromise(getAccountGroupPermissibleActionsPromise);
 
-        getAccountGroupPermissibleActionsPromise.catch(err => {
+        getAccountGroupPermissibleActionsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -462,7 +470,9 @@ describe('EnterpriseManagementV1', () => {
           billingUnitId: billingUnitId,
         };
 
-        const importAccountToEnterpriseResult = enterpriseManagement.importAccountToEnterprise(params);
+        const importAccountToEnterpriseResult = enterpriseManagement.importAccountToEnterprise(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(importAccountToEnterpriseResult);
@@ -472,7 +482,11 @@ describe('EnterpriseManagementV1', () => {
 
         const options = getOptions(createRequestMock);
 
-        checkUrlAndMethod(options, '/enterprises/{enterprise_id}/import/accounts/{account_id}', 'PUT');
+        checkUrlAndMethod(
+          options,
+          '/enterprises/{enterprise_id}/import/accounts/{account_id}',
+          'PUT'
+        );
         const expectedAccept = undefined;
         const expectedContentType = 'application/json';
         checkMediaHeaders(createRequestMock, expectedAccept, expectedContentType);
@@ -503,7 +517,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.importAccountToEnterprise({});
@@ -515,11 +529,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const importAccountToEnterprisePromise = enterpriseManagement.importAccountToEnterprise();
         expectToBePromise(importAccountToEnterprisePromise);
 
-        importAccountToEnterprisePromise.catch(err => {
+        importAccountToEnterprisePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -581,7 +595,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.createAccount({});
@@ -593,11 +607,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const createAccountPromise = enterpriseManagement.createAccount();
         expectToBePromise(createAccountPromise);
 
-        createAccountPromise.catch(err => {
+        createAccountPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -706,7 +720,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.getAccountById({});
@@ -718,11 +732,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getAccountByIdPromise = enterpriseManagement.getAccountById();
         expectToBePromise(getAccountByIdPromise);
 
-        getAccountByIdPromise.catch(err => {
+        getAccountByIdPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -779,7 +793,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.updateAccount({});
@@ -791,11 +805,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const updateAccountPromise = enterpriseManagement.updateAccount();
         expectToBePromise(updateAccountPromise);
 
-        updateAccountPromise.catch(err => {
+        updateAccountPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -813,7 +827,9 @@ describe('EnterpriseManagementV1', () => {
           actions: actions,
         };
 
-        const getAccountPermissibleActionsResult = enterpriseManagement.getAccountPermissibleActions(params);
+        const getAccountPermissibleActionsResult = enterpriseManagement.getAccountPermissibleActions(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(getAccountPermissibleActionsResult);
@@ -850,7 +866,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.getAccountPermissibleActions({});
@@ -862,11 +878,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getAccountPermissibleActionsPromise = enterpriseManagement.getAccountPermissibleActions();
         expectToBePromise(getAccountPermissibleActionsPromise);
 
-        getAccountPermissibleActionsPromise.catch(err => {
+        getAccountPermissibleActionsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -931,7 +947,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.createEnterprise({});
@@ -943,11 +959,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const createEnterprisePromise = enterpriseManagement.createEnterprise();
         expectToBePromise(createEnterprisePromise);
 
-        createEnterprisePromise.catch(err => {
+        createEnterprisePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1056,7 +1072,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.getEnterprise({});
@@ -1068,11 +1084,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getEnterprisePromise = enterpriseManagement.getEnterprise();
         expectToBePromise(getEnterprisePromise);
 
-        getEnterprisePromise.catch(err => {
+        getEnterprisePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1133,7 +1149,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.updateEnterprise({});
@@ -1145,11 +1161,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const updateEnterprisePromise = enterpriseManagement.updateEnterprise();
         expectToBePromise(updateEnterprisePromise);
 
-        updateEnterprisePromise.catch(err => {
+        updateEnterprisePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1167,7 +1183,9 @@ describe('EnterpriseManagementV1', () => {
           actions: actions,
         };
 
-        const getEnterprisePermissibleActionsResult = enterpriseManagement.getEnterprisePermissibleActions(params);
+        const getEnterprisePermissibleActionsResult = enterpriseManagement.getEnterprisePermissibleActions(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(getEnterprisePermissibleActionsResult);
@@ -1204,7 +1222,7 @@ describe('EnterpriseManagementV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await enterpriseManagement.getEnterprisePermissibleActions({});
@@ -1216,11 +1234,11 @@ describe('EnterpriseManagementV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getEnterprisePermissibleActionsPromise = enterpriseManagement.getEnterprisePermissibleActions();
         expectToBePromise(getEnterprisePermissibleActionsPromise);
 
-        getEnterprisePermissibleActionsPromise.catch(err => {
+        getEnterprisePermissibleActionsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });

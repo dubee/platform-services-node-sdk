@@ -155,7 +155,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.createAccessGroup({});
@@ -167,11 +167,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const createAccessGroupPromise = iamAccessGroups.createAccessGroup();
         expectToBePromise(createAccessGroupPromise);
 
-        createAccessGroupPromise.catch(err => {
+        createAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -244,7 +244,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.listAccessGroups({});
@@ -256,11 +256,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const listAccessGroupsPromise = iamAccessGroups.listAccessGroups();
         expectToBePromise(listAccessGroupsPromise);
 
-        listAccessGroupsPromise.catch(err => {
+        listAccessGroupsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -318,7 +318,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.getAccessGroup({});
@@ -330,11 +330,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getAccessGroupPromise = iamAccessGroups.getAccessGroup();
         expectToBePromise(getAccessGroupPromise);
 
-        getAccessGroupPromise.catch(err => {
+        getAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -400,7 +400,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.updateAccessGroup({});
@@ -412,11 +412,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const updateAccessGroupPromise = iamAccessGroups.updateAccessGroup();
         expectToBePromise(updateAccessGroupPromise);
 
-        updateAccessGroupPromise.catch(err => {
+        updateAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -474,7 +474,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.deleteAccessGroup({});
@@ -486,11 +486,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const deleteAccessGroupPromise = iamAccessGroups.deleteAccessGroup();
         expectToBePromise(deleteAccessGroupPromise);
 
-        deleteAccessGroupPromise.catch(err => {
+        deleteAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -545,7 +545,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.getAccountSettings({});
@@ -557,11 +557,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getAccountSettingsPromise = iamAccessGroups.getAccountSettings();
         expectToBePromise(getAccountSettingsPromise);
 
-        getAccountSettingsPromise.catch(err => {
+        getAccountSettingsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -619,7 +619,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.updateAccountSettings({});
@@ -631,11 +631,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const updateAccountSettingsPromise = iamAccessGroups.updateAccountSettings();
         expectToBePromise(updateAccountSettingsPromise);
 
-        updateAccountSettingsPromise.catch(err => {
+        updateAccountSettingsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -695,7 +695,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.isMemberOfAccessGroup({});
@@ -707,11 +707,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const isMemberOfAccessGroupPromise = iamAccessGroups.isMemberOfAccessGroup();
         expectToBePromise(isMemberOfAccessGroupPromise);
 
-        isMemberOfAccessGroupPromise.catch(err => {
+        isMemberOfAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -777,7 +777,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.addMembersToAccessGroup({});
@@ -789,11 +789,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const addMembersToAccessGroupPromise = iamAccessGroups.addMembersToAccessGroup();
         expectToBePromise(addMembersToAccessGroupPromise);
 
-        addMembersToAccessGroupPromise.catch(err => {
+        addMembersToAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -863,7 +863,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.listAccessGroupMembers({});
@@ -875,11 +875,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const listAccessGroupMembersPromise = iamAccessGroups.listAccessGroupMembers();
         expectToBePromise(listAccessGroupMembersPromise);
 
-        listAccessGroupMembersPromise.catch(err => {
+        listAccessGroupMembersPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -899,7 +899,9 @@ describe('IamAccessGroupsV2', () => {
           transactionId: transactionId,
         };
 
-        const removeMemberFromAccessGroupResult = iamAccessGroups.removeMemberFromAccessGroup(params);
+        const removeMemberFromAccessGroupResult = iamAccessGroups.removeMemberFromAccessGroup(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(removeMemberFromAccessGroupResult);
@@ -939,7 +941,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.removeMemberFromAccessGroup({});
@@ -951,11 +953,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const removeMemberFromAccessGroupPromise = iamAccessGroups.removeMemberFromAccessGroup();
         expectToBePromise(removeMemberFromAccessGroupPromise);
 
-        removeMemberFromAccessGroupPromise.catch(err => {
+        removeMemberFromAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -975,7 +977,9 @@ describe('IamAccessGroupsV2', () => {
           transactionId: transactionId,
         };
 
-        const removeMembersFromAccessGroupResult = iamAccessGroups.removeMembersFromAccessGroup(params);
+        const removeMembersFromAccessGroupResult = iamAccessGroups.removeMembersFromAccessGroup(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(removeMembersFromAccessGroupResult);
@@ -1013,7 +1017,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.removeMembersFromAccessGroup({});
@@ -1025,11 +1029,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const removeMembersFromAccessGroupPromise = iamAccessGroups.removeMembersFromAccessGroup();
         expectToBePromise(removeMembersFromAccessGroupPromise);
 
-        removeMembersFromAccessGroupPromise.catch(err => {
+        removeMembersFromAccessGroupPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1049,7 +1053,9 @@ describe('IamAccessGroupsV2', () => {
           transactionId: transactionId,
         };
 
-        const removeMemberFromAllAccessGroupsResult = iamAccessGroups.removeMemberFromAllAccessGroups(params);
+        const removeMemberFromAllAccessGroupsResult = iamAccessGroups.removeMemberFromAllAccessGroups(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(removeMemberFromAllAccessGroupsResult);
@@ -1089,7 +1095,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.removeMemberFromAllAccessGroups({});
@@ -1101,11 +1107,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const removeMemberFromAllAccessGroupsPromise = iamAccessGroups.removeMemberFromAllAccessGroups();
         expectToBePromise(removeMemberFromAllAccessGroupsPromise);
 
-        removeMemberFromAllAccessGroupsPromise.catch(err => {
+        removeMemberFromAllAccessGroupsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1129,7 +1135,9 @@ describe('IamAccessGroupsV2', () => {
           transactionId: transactionId,
         };
 
-        const addMemberToMultipleAccessGroupsResult = iamAccessGroups.addMemberToMultipleAccessGroups(params);
+        const addMemberToMultipleAccessGroupsResult = iamAccessGroups.addMemberToMultipleAccessGroups(
+          params
+        );
 
         // all methods should return a Promise
         expectToBePromise(addMemberToMultipleAccessGroupsResult);
@@ -1171,7 +1179,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.addMemberToMultipleAccessGroups({});
@@ -1183,11 +1191,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const addMemberToMultipleAccessGroupsPromise = iamAccessGroups.addMemberToMultipleAccessGroups();
         expectToBePromise(addMemberToMultipleAccessGroupsPromise);
 
-        addMemberToMultipleAccessGroupsPromise.catch(err => {
+        addMemberToMultipleAccessGroupsPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1269,7 +1277,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.addAccessGroupRule({});
@@ -1281,11 +1289,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const addAccessGroupRulePromise = iamAccessGroups.addAccessGroupRule();
         expectToBePromise(addAccessGroupRulePromise);
 
-        addAccessGroupRulePromise.catch(err => {
+        addAccessGroupRulePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1340,7 +1348,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.listAccessGroupRules({});
@@ -1352,11 +1360,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const listAccessGroupRulesPromise = iamAccessGroups.listAccessGroupRules();
         expectToBePromise(listAccessGroupRulesPromise);
 
-        listAccessGroupRulesPromise.catch(err => {
+        listAccessGroupRulesPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1416,7 +1424,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.getAccessGroupRule({});
@@ -1428,11 +1436,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const getAccessGroupRulePromise = iamAccessGroups.getAccessGroupRule();
         expectToBePromise(getAccessGroupRulePromise);
 
-        getAccessGroupRulePromise.catch(err => {
+        getAccessGroupRulePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1524,7 +1532,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.replaceAccessGroupRule({});
@@ -1536,11 +1544,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const replaceAccessGroupRulePromise = iamAccessGroups.replaceAccessGroupRule();
         expectToBePromise(replaceAccessGroupRulePromise);
 
-        replaceAccessGroupRulePromise.catch(err => {
+        replaceAccessGroupRulePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -1600,7 +1608,7 @@ describe('IamAccessGroupsV2', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await iamAccessGroups.removeAccessGroupRule({});
@@ -1612,11 +1620,11 @@ describe('IamAccessGroupsV2', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const removeAccessGroupRulePromise = iamAccessGroups.removeAccessGroupRule();
         expectToBePromise(removeAccessGroupRulePromise);
 
-        removeAccessGroupRulePromise.catch(err => {
+        removeAccessGroupRulePromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });

@@ -264,7 +264,7 @@ describe('GlobalTaggingV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await globalTagging.deleteTag({});
@@ -276,11 +276,11 @@ describe('GlobalTaggingV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const deleteTagPromise = globalTagging.deleteTag();
         expectToBePromise(deleteTagPromise);
 
-        deleteTagPromise.catch(err => {
+        deleteTagPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -346,7 +346,7 @@ describe('GlobalTaggingV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await globalTagging.attachTag({});
@@ -358,11 +358,11 @@ describe('GlobalTaggingV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const attachTagPromise = globalTagging.attachTag();
         expectToBePromise(attachTagPromise);
 
-        attachTagPromise.catch(err => {
+        attachTagPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
@@ -428,7 +428,7 @@ describe('GlobalTaggingV1', () => {
     });
 
     describe('negative tests', () => {
-      test('should enforce required parameters', async done => {
+      test('should enforce required parameters', async (done) => {
         let err;
         try {
           await globalTagging.detachTag({});
@@ -440,11 +440,11 @@ describe('GlobalTaggingV1', () => {
         done();
       });
 
-      test('should reject promise when required params are not given', done => {
+      test('should reject promise when required params are not given', (done) => {
         const detachTagPromise = globalTagging.detachTag();
         expectToBePromise(detachTagPromise);
 
-        detachTagPromise.catch(err => {
+        detachTagPromise.catch((err) => {
           expect(err.message).toMatch(/Missing required parameters/);
           done();
         });
